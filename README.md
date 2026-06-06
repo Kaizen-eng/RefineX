@@ -8,22 +8,24 @@
 
 The system architecture follows a lightweight client-server data flow model split into three distinct pipeline phases:
 
-[ Messy CSV / XLSX File ]
-│
-▼
+```text
+[ Messy CSV / XLSX File ] 
+           │
+           ▼
 ┌────────────────────────────────────────┐
 │  Phase 1: Ingestion & Data Frame Triage│ (Streamlit Frontend File Buffer)
 └──────────┬─────────────────────────────┘
-│
-▼
+           │
+           ▼
 ┌────────────────────────────────────────┐
 │  Phase 2: Live Diagnostic Engine      │ (Pandas & Plotly Null Matrix Evaluation)
 └──────────┬─────────────────────────────┘
-│
-▼
+           │
+           ▼
 ┌────────────────────────────────────────┐
 │  Phase 3: Automated Cleaning & Export  │ (Algorithmic Duplication & Null Strategy Hub)
 └────────────────────────────────────────┘
+```
 
 ### 1. File Ingestion & Frame Triage (Frontend)
 * **Technology:** Streamlit
@@ -59,8 +61,10 @@ The system architecture follows a lightweight client-server data flow model spli
 1. Clone the repository:
 ```bash
    git clone [https://github.com/Kaizen-eng/RefineX.git](https://github.com/Kaizen-eng/RefineX.git)
+   ```
 
 2. Install dependencies:
 ```bash
    pip install -r requirements.txt
    python -m streamlit run app.py
+   ```
