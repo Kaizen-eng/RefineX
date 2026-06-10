@@ -4,6 +4,54 @@
 
 ---
 
+## 👥 System Use Case Mapping
+
+The application defines a streamlined interaction boundary between the end-user (Data Analyst/Data Scientist) and the automated processing modules.
+
+```text
+                  ┌──────────────────────────────────────────────┐
+                  │               REFINEX SYSTEM                 │
+                  │                                              │
+                  │   ┌──────────────────────────────────────┐   │
+                  │   │        1. Ingest Data File           │   │
+                  │   └──────────────────────────────────────┘   │
+                  │                       ▲                      │
+                  │                       │ (triggers)           │
+                  │   ┌───────────────────┴──────────────────┐   │
+                  │   │  2. View Interactive Health Metrics  │   │
+                  │   └──────────────────────────────────────┘   │
+      O           │                       │                      │
+     /|\  ───────┼───────────────────────┼──────────────────────┼───────
+     / \          │                       ▼                      │
+                  │   ┌──────────────────────────────────────┐   │
+  [ USER ]        │   │     3. Select Cleaning Strategy      │   │
+(Data Analyst)    │   └──────────────────────────────────────┘   │
+                  │                       │                      │
+                  │                       │ (executes)           │
+                  │                       ▼                      │
+                  │   ┌──────────────────────────────────────┐   │
+                  │   │       4. Export Cleaned Data         │   │
+                  │   └──────────────────────────────────────┘   │
+                  │                                              │
+                  └──────────────────────────────────────────────┘
+
+```
+Core User Capabilities:
+Target Actor: Data Analyst / Data Scientist / Business Intelligence Engineer.
+
+Functional Scope:
+
+1. Ingest Data File: Secure binary stream upload of raw datasets directly into system session memory.
+
+2. View Interactive Health Metrics: Immediate client-side generation of error matrices and null distributions.
+
+3. Select Cleaning Strategy: Step-by-step vector tuning for deduplication and mathematical feature imputation.
+
+4. Export Cleaned Data: Instant download execution of structural files with sanitized indices.
+
+
+---
+
 ## 🛠️ Key Architectural Components
 
 The system architecture follows a lightweight client-server data flow model split into three distinct pipeline phases:
