@@ -108,7 +108,7 @@ The system architecture follows a lightweight client-server data flow model spli
 
 1. Clone the repository:
 ```bash
-   git clone [https://github.com/Kaizen-eng/RefineX.git](https://github.com/Kaizen-eng/RefineX.git)
+   git clone https://github.com/kaizen-eng/RefineX.git
    ```
 
 2. Install dependencies:
